@@ -1,0 +1,115 @@
+{% extends 'SistemaGestionBundle::layout.html.twig'%} {% block right %}
+<div class="container col-xs-12 col-sm-12 col-md-12">
+	<div class="row">
+		<center>
+			<h2>Buscar Empleo</h2>
+		</center>
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<div class="input-group search-panel">
+				<input type="search" class="form-control" id="buscarEmpleo"
+					placeholder="Buscar..."> <span class="input-group-btn">
+					<button type="submit" id="btnBuscarEmpleo" name="btnBuscarEmpleo"
+						class="btn btn-default">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</span>
+			</div>
+		</div>
+		<br> <br> <br>
+		<div class="searchable-container">
+
+			<div class="items col-xs-12 col-sm-12 col-md-12 clearfix">
+				<div class="info-block block-info clearfix">
+					<article class="search-result row">
+						<div class="pull-left">
+							<a href="#" class="thumbnail"><img
+								src="http://lorempixel.com/100/140/sports"></a>
+						</div>
+						<h4>Finibus Bonorum et Malorum</h4>
+						<h6>Excepteur sint occaecat cupidatat non proident, sunt in culpa
+							qui officia deserunt mollit anim id est laborum.</h6>
+						<span class="plus"><a href="#" title="Lorem ipsum"><i
+								class="glyphicon glyphicon-plus"></i></a></span> <span
+							class="clearfix border"></span>
+					</article>
+				</div>
+			</div>
+
+
+			<div class="items col-xs-12 col-sm-12 col-md-12 clearfix">
+				<div class="info-block block-info clearfix">
+					<article class="search-result row">
+						<div class="pull-left">
+							<a href="#" class="thumbnail"> <img
+								src="http://lorempixel.com/100/140/people">
+							</a>
+						</div>
+						<h4>Finibus Bonorum et Malorum</h4>
+						<h6>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+							accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+							quae ab illo inventore veritatis et quasi architecto beatae vitae
+							dicta sunt explicabo.</h6>
+						<span class="plus"><a href="#" title="Lorem ipsum"><i
+								class="glyphicon glyphicon-plus"></i></a></span> <span
+							class="clearfix border"></span>
+					</article>
+				</div>
+			</div>
+
+			<div class="items col-xs-12 col-sm-12 col-md-12 clearfix">
+				<div class="info-block block-info clearfix">
+					<article class="search-result row">
+						<div class="pull-left">
+							<a href="#" class="thumbnail"><img
+								src="http://lorempixel.com/100/140/food"></a>
+						</div>
+						<h4>Runaway Jury</h4>
+						<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Voluptatem, exercitationem, suscipit, distinctio, qui sapiente
+							aspernatur molestiae non corporis magni sit sequi iusto debitis
+							delectus doloremque.</h6>
+						<span class="plus"><a href="#" title="Lorem ipsum"><i
+								class="glyphicon glyphicon-plus"></i></a></span> <span
+							class="clearfix border"></span>
+					</article>
+				</div>
+			</div>
+
+			<div class="items col-xs-12 col-sm-12 col-md-12 clearfix">
+				<div class="info-block block-info clearfix">
+					<article class="search-result row">
+						<div class="pull-left">
+							<a href="#" title="Lorem ipsum" class="thumbnail"><img
+								src="http://lorempixel.com/100/140/sports" alt="Lorem ipsum" /></a>
+						</div>
+						<h4>
+							<a href="#" title="">Voluptatem, exercitationem, suscipit,
+								distinctio</a>
+						</h4>
+						<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Voluptatem, exercitationem, suscipit, distinctio, qui sapiente
+							aspernatur molestiae non corporis magni sit sequi iusto debitis
+							delectus doloremque.</h6>
+						<span class="plus"><a href="#" title="Lorem ipsum"><i
+								class="glyphicon glyphicon-plus"></i></a></span> <span
+							class="clearfix border"></span>
+					</article>
+				</div>
+			</div>
+
+			<div class="col-md-12 text-center">
+				<ul class="pagination pagination-sm text-center">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	{% endblock %}

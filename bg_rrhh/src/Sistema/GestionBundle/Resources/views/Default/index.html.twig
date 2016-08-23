@@ -1,0 +1,274 @@
+{% extends 'SistemaGestionBundle::layout.html.twig'%} {% block body %}
+<header>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+		<!-- NAVIGATION MENU -->
+
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="index" class="navbar-brand">Busgesti&#xf3;n</a>
+			</div>
+			<nav class="collapse navbar-collapse" role="navigation">
+				<ul class="nav navbar-nav">
+					<li><a href="/SistemaGestionBundle:Default:conductor">Inicio</a></li>
+					<li><a href="conductor">Gestion Conductor</a></li>
+					<li class="dropdown">
+						<!-- inicia el dropdown --> <a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">
+							<!-- invoca al plugin de bootstrap --> Gestion Empleo <span
+							class="caret"></span>
+					</a>
+						<ul role="menu" class="dropdown-menu">
+							<li><a href="#">Page 1-1</a></li>
+							<li><a href="#">Page 1-2</a></li>
+							<li><a href="#">Page 1-3</a></li>
+							<li><a href="#">Page 1-3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Ayuda</a></li>
+				</ul>
+
+				<ul class="nav pull-right top-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a data-toggle="modal" data-target="#myModal"><span
+								class="glyphicon glyphicon-log-in"></span>Login</a></li>
+					</ul>
+				</ul>
+		
+		</div>
+
+		</div>
+		<!-- fin container -->
+	</nav>
+	<!-- FIN NAVIGATION MENU -->
+</header>
+
+<div id="masthead">
+
+	<div id="myCarousel" class="carousel slide">
+
+		<!-- Dot Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Items -->
+		<div class="carousel-inner">
+			<div class="active item">
+				<img
+					src="//placeholdit.imgix.net/~text?txtsize=61&bg=f39c12&txtclr=ffffff%26amp%3Btext%3Di%2Blove%2Bbootstrap&txt=I+Love+Bootstrap&w=1300&h=500"
+					class="img-responsive">
+			</div>
+			<div class="item">
+				<img
+					src="//placeholdit.imgix.net/~text?txtsize=61&bg=3c8dbc&txtclr=ffffff%26amp%3Btext%3Di%2Blove%2Bbootstrap&txt=I+Love+Bootstrap&w=1300&h=500"
+					class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="//placehold.it/1300x500" class="img-responsive">
+			</div>
+		</div>
+
+		<!-- Navigation -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a> <a class="right carousel-control" href="#myCarousel"
+			data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+
+</div>
+<!--/masthead-->
+
+
+
+
+
+<body>
+	<div class="container">
+		<div class="row">
+			<h2>Bienvenido</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+				placerat arcu vel lacus tempor cursus. Curabitur a cursus arcu.
+				Vestibulum tincidunt urna at erat sodales molestie. Fusce dapibus
+				ornare dictum. Nam laoreet elit sit amet lorem pretium, sed bibendum
+				nunc malesuada. Nullam mattis lorem a molestie accumsan. Aenean
+				condimentum nec neque ut ultricies. Pellentesque lacinia purus sit
+				amet elementum dapibus. Fusce pulvinar felis nisl, ac lobortis purus
+				laoreet bibendum. Nunc ultricies mauris sed risus placerat
+				consequat. Aenean congue hendrerit enim, varius fermentum purus
+				posuere a. Sed accumsan sed turpis ac eleifend. Morbi varius dictum
+				eros vel porta. Aliquam porttitor mollis facilisis. Maecenas
+				bibendum, libero at dictum tincidunt, quam arcu facilisis tellus,
+				sit amet convallis purus lorem sit amet purus. Sed imperdiet eros
+				sed elit aliquet, id tincidunt nibh euismod. Cras pulvinar nec orci
+				non lacinia. Phasellus placerat, neque eget euismod congue, sapien
+				elit luctus ex, quis fermentum tellus quam ut nibh. Phasellus eget
+				urna nec nisl iaculis volutpat. Fusce quis laoreet metus.</p>
+			<div class="container" id="contact" name="contact">
+				<div class="row">
+					<br>
+					<h1 class="centered">THANKS FOR VISITING US</h1>
+					<br>
+					<div class="row">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							placerat arcu vel lacus tempor cursus. Curabitur a cursus arcu.
+							Vestibulum tincidunt urna at erat sodales molestie. Fusce dapibus
+							ornare dictum. Nam laoreet elit sit amet lorem pretium, sed
+							bibendum nunc malesuada. Nullam mattis lorem a molestie accumsan.
+							Aenean condimentum nec neque ut ultricies. Pellentesque lacinia
+							purus sit amet elementum dapibus. Fusce pulvinar felis nisl, ac
+							lobortis purus laoreet bibendum. Nunc ultricies mauris sed risus
+							placerat consequat. Aenean congue hendrerit enim, varius
+							fermentum purus posuere a. Sed accumsan sed turpis ac eleifend.</p>
+						<p>Morbi varius dictum eros vel porta. Aliquam porttitor mollis
+							facilisis. Maecenas bibendum, libero at dictum tincidunt, quam
+							arcu facilisis tellus, sit amet convallis purus lorem sit amet
+							purus. Sed imperdiet eros sed elit aliquet, id tincidunt nibh
+							euismod. Cras pulvinar nec orci non lacinia. Phasellus placerat,
+							neque eget euismod congue, sapien elit luctus ex, quis fermentum
+							tellus quam ut nibh. Phasellus eget urna nec nisl iaculis
+							volutpat. Fusce quis laoreet metus.</p>
+						<P>Phasellus urna nisi, semper posuere lobortis ac, posuere
+							imperdiet felis. Mauris vel suscipit orci. Praesent laoreet a
+							odio quis euismod. Cras eget nulla in urna viverra finibus. Morbi
+							a accumsan justo, a tristique erat. Sed ac mollis augue,
+							consectetur scelerisque diam. Vestibulum ante ipsum primis in
+							faucibus orci luctus et ultrices posuere cubilia Curae; Nunc
+							suscipit sollicitudin convallis. Proin mollis tortor quis posuere
+							tincidunt. Aenean maximus tellus sit amet sollicitudin posuere.
+							Proin aliquet velit at pellentesque tempus.</p>
+						<p>Donec sit amet orci aliquam, placerat turpis nec, pulvinar
+							diam. Nunc ex sem, posuere sed mauris vitae, luctus lobortis
+							neque. Curabitur et odio sed tortor semper finibus at at nisl.
+							Quisque tempus nibh tortor, in elementum mi vulputate a. Sed quis
+							scelerisque enim. Sed finibus aliquet sapien, a bibendum dolor.
+							Maecenas vehicula massa libero, lobortis ultrices nunc vehicula
+							tincidunt. Nunc at lacus ut lorem euismod placerat. In suscipit
+							nec diam vitae laoreet. Proin rhoncus, lectus at faucibus
+							imperdiet, mi ligula bibendum risus, non cursus mauris dui sit
+							amet sem. Aliquam a quam nec erat cursus condimentum. Morbi
+							aliquet bibendum leo, et semper urna sagittis ut. Integer
+							suscipit arcu sit amet neque eleifend, id suscipit quam
+							malesuada. Mauris pretium magna nulla, ut pellentesque dui rutrum
+							sed. Nunc rutrum ultricies dui. Fusce et urna pulvinar, porta
+							nisi nec, vehicula lorem.</p>
+						<p>Ut quis mauris magna.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+						<h3>Contact Information</h3>
+						<p>
+							<span class=""></span> Monkey Work ltda.<br /> <span class=""></span>
+							Arturo Pratt 350 Of. 910 <br /> <span class=""></span> Temuco,
+							Chile <br /> <span class=""></span> <a href="#"> +56 45 275957</a>
+							<br /> <span class=""></span> <a href="#"> www.monkeywork.cl</a>
+							<br />
+						</p>
+					</div>
+					<!-- col -->
+
+
+					<div class="col-lg-4">
+						<h3>Newsletter</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							placerat arcu vel lacus tempor cursus. Curabitur a cursus arcu.
+							Vestibulum tincidunt urna at erat sodales molestie. Fusce dapibus
+							ornare dictum. Nam laoreet elit sit amet lorem pretium, sed
+							bibendum nunc malesuada. Nullam mattis lorem a molestie accumsan.
+							Aenean condimentum nec neque ut ultricies. Pellentesque lacinia
+							purus sit amet elementum dapibus. Fusce pulvinar felis nisl, ac
+							lobortis purus laoreet bibendum. Nunc ultricies mauris sed risus
+							placerat consequat. Aenean congue hendrerit enim, varius
+							fermentum purus posuere a. Sed accumsan sed turpis ac eleifend.</p>
+					</div>
+					<!-- col -->
+
+					<div class="col-lg-4">
+						<h3>Support Us</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and
+							typesetting industry. Lorem Ipsum has been the industry's
+							standard dummy text ever since the 1500s, when an unknown printer
+							took a galley of type and scrambled it to make a type specimen
+							book.</p>
+					</div>
+					<!-- col -->
+				</div>
+
+
+				<!-- Login Modal -->
+
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+
+					<form class="form-login">
+						<div class="form-login-heading">
+							<button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">x&nbsp;</span><span class="sr-only">Close</span>
+							</button>
+						</div>
+						<h2 class="form-login-heading">Ingresar Usuario a Busgestion</h2>
+
+						<div class="login-wrap">
+							<input type="text" class="form-control" placeholder="User ID"
+								autofocus> <br> <input type="password" class="form-control"
+								placeholder="Password"> <label class="checkbox"> <span
+								class="pull-right"> <a data-toggle="modal"
+									href="#myModalOlvidar">¿Olvidaste Tu contraseña?</a>
+
+							</span>
+							</label>
+							<button class="btn btn-primary" href="index" type="submit">
+								<i class="fa fa-lock"></i>Ingresar
+							</button>
+							<hr>
+
+							<div class="registration">
+								¿No tienes una cuenta aqui?<br /> <a class="" href="#"> Crear
+									Cuenta </a>
+							</div>
+
+						</div>
+
+						<!-- Modal -->
+						<div aria-hidden="true" aria-labelledby="myModalLabel"
+							role="dialog" tabindex="-1" id="myModalOlvidar"
+							class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"
+											aria-hidden="true">&times;</button>
+										<h4 class="modal-title">¿Olvidaste Tu contraseña?</h4>
+									</div>
+									<div class="modal-body">
+										<p>Introduzca su dirección de correo electrónico para
+											restablecer tu contraseña.</p>
+										<input type="text" name="email" placeholder="Email"
+											autocomplete="off" class="form-control placeholder-no-fix">
+
+									</div>
+									<div class="modal-footer">
+										<button data-dismiss="modal" class="btn btn-default"
+											type="button">Cancelar</button>
+										<button class="btn btn-theme" type="button">Enviar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- modal -->
+
+					</form>
+				</div>
+
+</body>
+
+<footer class="container-fluid text-center"> </footer>
+{% endblock %} {% block javascript %} {{ parent() }} {% endblock %}

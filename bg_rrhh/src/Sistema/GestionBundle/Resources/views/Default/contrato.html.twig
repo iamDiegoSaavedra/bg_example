@@ -1,0 +1,92 @@
+{% extends '::base.html.twig' %} {% block body %}
+<!--main-->
+<div class="container">
+	<div class="row">
+		<!--left-->
+		<div class="col-md-6" id="leftCol">
+			<h2 id="sec0">Contrato</h2>
+			<div class="row">
+				<div class="dt-buttons btn group">
+					<a data-toggle="collapse" data-target="#demo"
+						class="btn btn-default buttons-create"> <span
+						class="glyphicon glyphicon-plus"></span><br> Ampliar
+					</a> <a data-toggle="collapse" data-target="#demo"
+						class="btn btn-default buttons-create"> <span
+						class="glyphicon glyphicon-minus"></span><br> ocultar
+					</a> <a class="btn btn-default buttons-create"> <span
+						class="glyphicon glyphicon-print"></span><br> Imprimir
+					</a> <a class="btn btn-default buttons-create"> <span
+						class="glyphicon glyphicon-floppy-save"></span><br> Guardar
+					</a>
+
+
+
+				</div>
+			</div>
+			<div id="demo" class="collapse">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+					placerat arcu vel lacus tempor cursus. Curabitur a cursus arcu.
+					Vestibulum tincidunt urna at erat sodales molestie. Fusce dapibus
+					ornare dictum. Nam laoreet elit sit amet lorem pretium, sed
+					bibendum nunc malesuada. Nullam mattis lorem a molestie accumsan.
+					Aenean condimentum nec neque ut ultricies. Pellentesque lacinia
+					purus sit amet elementum dapibus. Fusce pulvinar felis nisl, ac
+					lobortis purus laoreet bibendum. Nunc ultricies mauris sed risus
+					placerat consequat. Aenean congue hendrerit enim, varius fermentum
+					purus posuere a. Sed accumsan sed turpis ac eleifend.</p>
+			</div>
+		</div>
+		<!--end left-->
+
+
+
+		<!--right-->
+		<div class="col-md-6">
+
+			<h2 id="sec0">Anexos</h2>
+			<div class="row">
+				<div class="dt-buttons btn group">
+					<a data-toggle="collapse" data-target="#anexo"
+						class="btn btn-default buttons-create"> <span
+						class="glyphicon glyphicon-plus"></span><br> Ampliar
+					</a> <a data-toggle="collapse" data-target="#anexo"
+						class="btn btn-default buttons-create"> <span
+						class="glyphicon glyphicon-minus"></span><br> ocultar
+					</a> <a class="btn btn-default buttons-create"> <span
+						class="glyphicon glyphicon-print"></span><br> Imprimir
+					</a> <a class="btn btn-default buttons-create"> <span
+						class="glyphicon glyphicon-floppy-save"></span><br> Guardar
+					</a>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<label for="posAdjCur">Adjuntar Anexo:</label> <input type="file"
+						id="posAdjCur">
+				</div>
+			</div>
+
+			<div id="anexo" class="collapse">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+					placerat arcu vel lacus tempor cursus. Curabitur a cursus arcu.
+					Vestibulum tincidunt urna at erat sodales molestie. Fusce dapibus
+					ornare dictum. Nam laoreet elit sit amet lorem pretium, sed
+					bibendum nunc malesuada. Nullam mattis lorem a molestie accumsan.
+					Aenean condimentum nec neque ut ultricies. Pellentesque lacinia
+					purus sit amet elementum dapibus. Fusce pulvinar felis nisl, ac
+					lobortis purus laoreet bibendum. Nunc ultricies mauris sed risus
+					placerat consequat. Aenean congue hendrerit enim, varius fermentum
+					purus posuere a. Sed accumsan sed turpis ac eleifend.</p>
+			</div>
+
+
+		</div>
+		<!--/right-->
+	</div>
+	<!--/row-->
+</div>
+<!--/container-->
+
+{% endblock %}

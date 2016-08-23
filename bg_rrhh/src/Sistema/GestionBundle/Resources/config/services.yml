@@ -1,0 +1,4 @@
+services:
+#    sistema_gestion.example:
+#        class: Sistema\GestionBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

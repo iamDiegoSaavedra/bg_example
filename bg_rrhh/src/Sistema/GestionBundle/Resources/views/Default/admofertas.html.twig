@@ -1,0 +1,231 @@
+{% extends 'SistemaGestionBundle::layout.html.twig' %} {% block right %}
+<div class="container col-md-12">
+	<h1>Administar ofertas</h1>
+	<div class="row">
+		<div class="section">
+			<h2>Ofertas Activas</h2>
+			<div class="row">
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Buscar">
+					</div>
+					<button type="submit" class="btn btn-default">Buscar</button>
+				</form>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-hover table-striped">
+						<thead>
+							<th>#</th>
+							<th>Img</th>
+							<th>Oferta Empleo</th>
+							<th>Accion</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td><img
+									src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+									class="img-circle" width="60"></td>
+								<td>
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<h2>Oferta Empleo</h2>
+											<p>Descripcion del empleo
+											
+											
+											<p>
+											
+											
+											<p>Fecha publicacion</p>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="btn-group">
+										<button class="btn btn-default" value="left" type="button">Editar</button>
+										<br> <label class="checkbox-inline"><input type="checkbox"
+											value="right">Desactivar Oferta</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><img
+									src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+									class="img-circle" width="60"></td>
+								<td>
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<h2>Oferta Empleo</h2>
+											<p>Descripcion del empleo
+											
+											
+											<p>
+											
+											
+											<p>Fecha publicacion</p>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="btn-group">
+										<button class="btn btn-default" value="left" type="button">Editar</button>
+										<br> <label class="checkbox-inline"><input type="checkbox"
+											value="right">Desactivar Oferta</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><img
+									src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+									class="img-circle" width="60"></td>
+								<td>
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<h2>Oferta Empleo</h2>
+											<p>Descripcion del empleo
+											
+											
+											<p>
+											
+											
+											<p>Fecha publicacion</p>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="btn-group">
+										<button class="btn btn-default" value="left" type="button">Editar</button>
+										<br> <label class="checkbox-inline"><input type="checkbox"
+											value="right">Desactivar Oferta</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><img
+									src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+									class="img-circle" width="60"></td>
+								<td>
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<h2>Oferta Empleo</h2>
+											<p>Descripcion del empleo
+											
+											
+											<p>
+											
+											
+											<p>Fecha publicacion</p>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="btn-group">
+										<button class="btn btn-default" value="left" type="button">Editar</button>
+										<br> <label class="checkbox-inline"><input type="checkbox"
+											value="right">Desactivar Oferta</label>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-xs-4">Page 1 of 5</div>
+				<div class="col col-xs-4 col-xs-offset-4">
+					<button class="btn btn-primary" type="button">Guadar Cambios</button>
+				</div>
+			</div>
+			<div class="row col-xs-4 col-xs-offset-3 ">
+
+				<ul class="pagination hidden-xs pull-right">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				</ul>
+				<ul class="pagination visible-xs pull-right">
+					<li><a href="#">«</a></li>
+					<li><a href="#">»</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="section">
+		<h2>Ofertas Desactivadas</h2>
+		<div class="row">
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Buscar">
+				</div>
+				<button type="submit" class="btn btn-default">Buscar</button>
+			</form>
+		</div>
+		<div class="row">
+			<table class="table table-hover table-striped">
+				<thead>
+					<th>#</th>
+					<th>Oferta Empleo</th>
+					<th>Accion</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<h2>Titulo Oferta Empleo</h2>
+									<p>Descripcion del empleo
+									
+									
+									<p>
+									
+									
+									<p>Fecha publicacion</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+								<button class="btn btn-default" value="left" type="button">Editar</button>
+								<br> <label class="checkbox-inline"><input type="checkbox"
+									value="right">Activar Oferta</label>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row">
+			<div class="row">
+				<div class="col col-xs-4">Page 1 of 5</div>
+				<div class="col col-xs-4 col-xs-offset-4">
+					<button class="btn btn-primary" type="button">Guadar Cambios</button>
+				</div>
+			</div>
+			<div class="row col-xs-4 col-xs-offset-3 ">
+				<ul class="pagination hidden-xs pull-right">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				</ul>
+				<ul class="pagination visible-xs pull-right">
+					<li><a href="#">«</a></li>
+					<li><a href="#">»</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<!-- end container -->
+{% endblock %}

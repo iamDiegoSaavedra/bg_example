@@ -1,0 +1,1043 @@
+{% extends 'SistemaGestionBundle::layout.html.twig'%} {% block
+stylesheets %} {{ parent () }}
+<link rel="stylesheet"
+	href="{{ asset('bundles/sistemagestion/css/formValidation.min.css') }}">
+<link rel="stylesheet"
+	href="{{ asset('bundles/sistemagestion/css/jquery.dataTables.min.css') }}">
+{% endblock %} {% block right %}
+<!--right-->
+<!-- SECCION 0 -->
+<h2 id="sec0">Perfil Conductor</h2>
+
+<div class="row">
+	<div class="btn-group" style="margin: 7px">
+		<a data-toggle="modal" data-target="#ModalNuevoCon"
+			class="btn btn-default buttons-create">Nuevo</a> <a
+			data-toggle="modal" data-target="#ModalReporte1"
+			class="btn btn-default buttons-selected buttons-edit">Reporte</a> <a
+			data-toggle="modal" data-target="#ModalReporte2"
+			class="btn btn-default buttons-selected buttons-edit">Reporte</a> <a
+			data-toggle="modal" data-target="#ModalEvaluacion"
+			class="btn btn-default buttons-selected buttons-edit">Evaluacion</a>
+	</div>
+	<form class="navbar-form navbar-right" role="search" action="#"
+		method="get">
+		<div class="input-group">
+			<input type="search" class="form-control" id="buscarCon"
+				name="buscarCon" placeholder="Buscar"> <span class="input-group-btn">
+				<button type="submit" id="btnBuscarCon" name="btnBuscarCon"
+					class="btn btn-default">
+					<i class="glyphicon glyphicon-search"></i>
+				</button>
+			</span>
+		</div>
+	</form>
+</div>
+
+<div class="table-responsive">
+	<!-- inicio table responsive -->
+	<table class="table table-bordered table-striped dataTable">
+		<thead>
+			<tr>
+				<th class="">#</th>
+				<th class="data">Nombre</th>
+				<th class="data">Apellido</th>
+				<th class="data">Rut</th>
+				<th class="data">Licencia</th>
+				<th class="">Contrato</th>
+				<th class="">Accion</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr role="row" class="odd">
+				<td class="">1</td>
+				<td class="data">Cesar</td>
+				<td class="data">Cesaro</td>
+				<td class="data">12.345.678-9</td>
+				<td class="data">Clase B</td>
+				<td class=""><a type="button" class="btn btn-primary btn-xs"
+					data-toggle="modal" data-target="#modaliframe"><span
+						class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				<td>
+					<button class="btn btn-sucess btn-xs save">
+						<span class="glyphicon glyphicon-floppy-disk"></span>
+					</button>
+					<button class="btn btn-info btn-xs edit">
+						<span class="glyphicon glyphicon-edit"></span>
+					</button>
+					<button class="btn btn-danger btn-xs delete" data-toggle="modal"
+						href="#Modaldelete" data-title="johnny" data-id="1">
+						<span class="glyphicon glyphicon-trash"></span>
+					</button>
+				</td>
+			</tr>
+			<tr role="row" class="odd">
+				<td class="">2</td>
+				<td class="data">Peter</td>
+				<td class="data">Parker</td>
+				<td class="data">19.876.543-2</td>
+				<td class="data">Clase B</td>
+				<td class=""><a type="button" class="btn btn-primary btn-xs"
+					data-toggle="modal" data-target="#modaliframe"><span
+						class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				<td>
+					<button class="btn btn-sucess btn-xs save">
+						<span class="glyphicon glyphicon-floppy-disk"></span>
+					</button>
+					<button class="btn btn-info btn-xs edit">
+						<span class="glyphicon glyphicon-edit"></span>
+					</button>
+					<button class="btn btn-danger btn-xs delete" data-toggle="modal"
+						href="#Modaldelete">
+						<span class="glyphicon glyphicon-trash"></span>
+					</button>
+				</td>
+			</tr>
+			<tr role="row" class="odd">
+				<td class="">3</td>
+				<td class="data">Armando</td>
+				<td class="data">Casas</td>
+				<td class="data">13.456.789-2</td>
+				<td class="data">Clase B</td>
+				<td class=""><a type="button" class="btn btn-primary btn-xs"
+					data-toggle="modal" data-target="#modaliframe"><span
+						class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				<td>
+					<button class="btn btn-sucess btn-xs save">
+						<span class="glyphicon glyphicon-floppy-disk"></span>
+					</button>
+					<button class="btn btn-info btn-xs edit">
+						<span class="glyphicon glyphicon-edit"></span>
+					</button>
+					<button class="btn btn-danger btn-xs delete" data-toggle="modal"
+						href="#Modaldelete">
+						<span class="glyphicon glyphicon-trash"></span>
+					</button>
+				</td>
+			</tr>
+			<tr role="row" class="odd">
+				<td class="">4</td>
+				<td class="data">Miguel</td>
+				<td class="data">Angel</td>
+				<td class="data">10.456.789-0</td>
+				<td class="data">Clase B</td>
+				<td class=""><a type="button" class="btn btn-primary btn-xs"
+					data-toggle="modal" data-target="#modaliframe"><span
+						class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				<td>
+					<button class="btn btn-sucess btn-xs save">
+						<span class="glyphicon glyphicon-floppy-disk"></span>
+					</button>
+					<button class="btn btn-info btn-xs edit">
+						<span class="glyphicon glyphicon-edit"></span>
+					</button>
+					<button class="btn btn-danger btn-xs delete" data-toggle="modal"
+						href="#Modaldelete">
+						<span class="glyphicon glyphicon-trash"></span>
+					</button>
+				</td>
+
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- Fin table responsive -->
+<div class="panel-footer">
+	<div class="col-md-12 text-center">
+		<ul class="pagination pagination-sm text-center">
+			<li class="disabled"><a href="#">&laquo;</a></li>
+			<li class="active"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<hr>
+
+<!-- SECCION 1 -->
+<h2 id="sec2">Hoja de Vida Conductor</h2>
+
+<div class="row">
+	<form class="navbar-form navbar-right" role="search" action="#"
+		method="get">
+		<div class="input-group">
+			<input type="text" class="form-control" id="buscarHVC"
+				name="buscarHVC" placeholder="Buscar"> <span class="input-group-btn">
+				<button type="submit" id="btnBuscarHVC" name="btnBuscarHVC"
+					class="btn btn-default">
+					<i class="glyphicon glyphicon-search"></i>
+				</button>
+			</span>
+		</div>
+	</form>
+</div>
+
+
+
+<div class="row">
+	<div class="table-responsive">
+		<!-- start table responsive HVC -->
+		<table class="table table-bordered table-striped dataTable">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Rut</th>
+					<th>Hoja de vida</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Cesar</td>
+					<td>Cesaro</td>
+					<td>12.345.678-9</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Peter</td>
+					<td>Parker</td>
+					<td>19.876.543-2</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+					</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Armando</td>
+					<td>Casas</td>
+					<td>13.456.789-2</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- end table responsive -->
+
+</div>
+
+<h2 id="sec2">Sanciones</h2>
+
+<div class="row">
+	<form class="navbar-form navbar-right" role="search" action="#"
+		method="get">
+		<div class="input-group">
+			<input type="text" class="form-control" id="buscarSan"
+				name="buscarSan" placeholder="Buscar"> <span class="input-group-btn">
+				<button type="submit" id="btnBuscarSan" name="btnBuscarSan"
+					class="btn btn-default">
+					<i class="glyphicon glyphicon-search"></i>
+				</button>
+			</span>
+		</div>
+	</form>
+</div>
+
+<div class="row">
+	<div class="table-responsive">
+		<!-- inicio table responsive Sancion -->
+		<table class="table table-bordered table-striped dataTable">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Rut</th>
+					<th>Fecha Sancion</th>
+					<th>Observaciones</th>
+					<th>Ver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Cesar</td>
+					<td>Cesaro</td>
+					<td>12.345.678-9</td>
+					<td>06-02-2015</td>
+					<td>--</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Peter</td>
+					<td>Parker</td>
+					<td>19.876.543-2</td>
+					<td>06-02-2015</td>
+					<td>--</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Armando</td>
+					<td>Casas</td>
+					<td>13.456.789-2</td>
+					<td>06-02-2015</td>
+					<td>--</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- end table responsive -->
+	<form class="navbar-form navbar-right">
+		<a type='button' class='btn btn-default center-block'
+			data-toggle='modal' data-target='#modalNuevaSancion'>Nueva Sancion</a>
+	</form>
+</div>
+
+
+
+<h2 id="sec3">Constancias</h2>
+<div class="row">
+	<form class="navbar-form navbar-right" role="search" action="#"
+		method="get">
+		<div class="input-group">
+			<input type="text" class="form-control" id="buscarCons"
+				name="buscarCons" placeholder="Buscar"> <span
+				class="input-group-btn">
+				<button type="submit" id="btnBuscarCons" name="btnBuscarCons"
+					class="btn btn-default">
+					<i class="glyphicon glyphicon-search"></i>
+				</button>
+			</span>
+		</div>
+	</form>
+</div>
+
+<div class="row">
+	<div class="table-responsive">
+		<!-- start table responsive Constancia -->
+		<table class="table table-bordered table-striped dataTable">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Rut</th>
+					<th>Fecha Sancion</th>
+					<th>Observaciones</th>
+					<th>Ver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Cesar</td>
+					<td>Cesaro</td>
+					<td>12.345.678-9</td>
+					<td>06-02-2015</td>
+					<td>--</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Peter</td>
+					<td>Parker</td>
+					<td>19.876.543-2</td>
+					<td>06-02-2015</td>
+					<td>--</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Armando</td>
+					<td>Casas</td>
+					<td>13.456.789-2</td>
+					<td>06-02-2015</td>
+					<td>--</td>
+					<td><a type="button" class="btn btn-primary btn-xs"
+						data-toggle="modal" data-target="#modaliframe"><span
+							class="glyphicon glyphicon-eye-open"></span>Ver</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- end table responsive -->
+	<form class="navbar-form navbar-right">
+		<a type='button' class='btn btn-default center-block'
+			data-toggle='modal' data-target='#modalNuevaConstancia'>Nueva
+			Constancia</a>
+	</form>
+
+</div>
+<hr>
+
+<!-- INICIO MODAL NUEVO CONDUCTOR-->
+<div class="modal fade" id="ModalNuevoCon" tabindex="-1" role="dialog"
+	aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Nuevo Conductor</h4>
+			</div>
+			<div class="modal-body">
+				<form id="newformsubmit" method="post" class='form-horizontal'
+					action="javascript:alert( 'success!' );">
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newRut">RUT:</label>
+						<div class="col-md-9">
+							<input type="text" id="newRut" name="newRut" class="form-control"
+								class="required" placeholder="12.123.123-1">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="name">Nombre(s)</label>
+						<div class="col-md-9">
+							<input type="text" id="newName" name="newName"
+								class="form-control" class="required">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newLastname">Apellido(s)</label>
+						<div class="col-md-9">
+							<input type="text" id="newLastname" name="newLastname"
+								class="form-control" class="required">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newDir">Direccion</label>
+						<div class="col-md-9">
+							<input type="text" id="newDir" name="newDir" class="form-control"
+								class="required">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newComuna">Comuna</label>
+						<div class="col-md-9">
+							<select class="form-control" id="newComuna" name="newComuna">
+								<option value="">--</option>
+								<option value="1">Temuco</option>
+								<option value="2">Padre las Casas</option>
+								<option value="3">Lautaro</option>
+								<option value="4">Freire</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newRegion">Region</label>
+						<div class="col-md-9">
+							<select class="form-control" id="newRegion" name="newRegion">
+								<option value="">--</option>
+								<option value="1">IX de la Araucania</option>
+								<option value="2">XIV de los Rios</option>
+								<option value="3">X de los Lagos</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newTelNumber">T. Fijo</label>
+						<div class="col-md-9">
+							<input type="number" id="newTelNumber" name="newTelNumber"
+								class="form-control" class="required">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newCellNumber">T.
+							Celular</label>
+						<div class="col-md-9">
+							<input type="number" class="form-control" name="newCellNumber"
+								id="newCellNumber" class="required">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newLicencia">Licencia
+							Clase</label>
+						<div class="col-md-9">
+							<select class="form-control" name="newLicencia" id="newLicencia"
+								class="required">
+								<option value="">--</option>
+								<option value="1">A1</option>
+								<option value="2">A2</option>
+								<option value="4">A3</option>
+								<option value="5">A4</option>
+								<option value="6">A5</option>
+								<option value="7">B</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="newContrato">Contrato</label>
+						<div class="col-md-9">
+							<input type="file" id="newContrato">
+							<p class="help-block">Adjuntar un archivo de Contrato.</p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary" id="btnSave">Guardar</button>
+						<button type="reset" class="btn btn-default" id="btnClose"
+							data-dismiss="modal">Cerrar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fin Modal -->
+<!-- Fin Modal Nuevo Conductor -->
+
+<!-- Inicio Evaluacion Modal -->
+<div class="modal fade" id="ModalEvaluacion" tabindex="-1" role="dialog"
+	aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">x</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="lineModalLabel">Evaluacion</h3>
+			</div>
+			<div class="modal-body">
+				<!-- contenido -->
+				<div class="col-sm-12 col-md-12">
+					<div class="form-group">
+						<label class="control-label">Evaluacion Psicologia</label>
+						<div class="msg msg-success msg-success-text">
+							<span class="glyphicon glyphicon glyphicon-ok"></span> Aprobado
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-12">
+					<div class="form-group">
+						<label class="control-label">Evaluacion Comportamiento</label>
+						<div class="msg msg-info">
+							<span class="glyphicon glyphicon-exclamation-sign"></span>
+							Evaluacion Pendiente
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-12">
+					<div class="form-group">
+						<label class="control-label">Evaluacion Servicio</label>
+						<div class="msg msg-warning msg-warning-text">
+							<span class="glyphicon glyphicon-exclamation-sign"></span>
+							Advertencia: Evaluacion baja
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-12"">
+					<div class="form-group">
+						<label class="control-label">Sanciones</label> <input type="text"
+							class="form-control" placeholder="Cantidad Sanciones" disabled="">
+						<div class="msg msg-info">
+							<span class="glyphicon glyphicon-info-sign"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-12">
+					<div class="form-group">
+						<label class="control-label">Constancias</label> <input
+							type="text" class="form-control"
+							placeholder="Cantidad Constancias" disabled="">
+						<div class="msg msg-warning msg-danger-text">
+							<span class="glyphicon glyphicon-exclamation-sign"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-12">
+					<div class="form-group">
+						<label class="control-label">Comentarios</label>
+						<textarea class="form-control" name="sanDetalles" id="sanDetalles"
+							rows="3"></textarea>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-12">
+					<div class="form-group">
+						<label class="control-label">Resultado</label>
+						<div class="msg msg-danger">
+							<span class="glyphicon glyphicon glyphicon-remove"></span>
+							Reprobado
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fin Evaluacion Modal -->
+
+<!-- Modal Nueva Sancion -->
+<div class="modal fade" id="modalNuevaSancion" tabindex="-1"
+	role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">x</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="titleSancionConductor">Sancion Conductor</h3>
+			</div>
+			<div class="modal-body">
+				<!-- content goes here -->
+				<form id="formNuevoSancion" method="post" role="form-horizontal"
+					role="form">
+					<!-- formulario -->
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanMotivo">Motivo</label> <select
+									class="form-control input-sm" id="sanMotivo" name="sanMotivo">
+									<option value="">-</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanTema">Tema</label> <select
+									class="form-control input-sm" id="sanTema" name="sanTema">
+									<option value="">-</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanNombre">Nombre Conductor</label>
+								<input type="text" name="sanNombre" id="sanNombre"
+									class="form-control input-sm">
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanApellido">Rut Conductor</label>
+								<input type="text" name="sanApellido" id="sanApellido"
+									class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanMaquina">N° Maquina</label>
+								<input type="text" name="sanMaquina" id="sanMaquina"
+									class="form-control input-sm">
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanPatente">Patente Maquina</label>
+								<input type="text" name="sanPatente" id="sanPatente"
+									class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanFecha">Fecha</label> <input
+									type="text" name="sanFecha" id="sanFecha"
+									class="form-control input-sm">
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanHora">Hora</label> <input
+									type="text" name="sanHora" id="sanHora"
+									class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanLugar">Lugar</label> <input
+									type="text" name="sanLugar" id="sanLugar"
+									class="form-control input-sm">
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="sanRecorrido">Recorrido</label>
+								<select class="form-control input-sm" name="sanRecorrido"
+									id="sanRecorrido">
+									<option value="">-</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-12 col-md-12">
+							<div class="form-group">
+								<label class="control-label" for="sanDetalles">Detalles</label>
+								<textarea class="form-control" name="sanDetalles"
+									id="sanDetalles" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-12 col-md-12">
+							<div class="form-group">
+								<label class="control-label" for="sanSancion">Sancion</label>
+								<textarea class="form-control" name="sanSancion" id="sanSancion"
+									rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-offset-4 col-sm-10">
+							<div class="form-group">
+								<button type="submit" id="btnRegSan" class="btn btn-primary">Registrar</button>
+								<button type="reset" id="btnResetSan" class="btn btn-default">Limpiar</button>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- Fin Formulario -->
+			</div>
+		</div>
+	</div>
+</div>
+<!--Fin Modal-->
+<!-- Fin Modal Nueva Sancion -->
+
+<!-- Modal Nueva Constancia -->
+<div class="modal fade" id="modalNuevaConstancia" tabindex="-1"
+	role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">x</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="titleNuevaConstancia">Nueva Constancia</h3>
+			</div>
+			<div class="modal-body">
+				<!-- Contenido Aqui -->
+				<form id="formNuevoConstancia" method="post" role="form-horizontal"
+					role="form">
+					<!-- formulario -->
+					<h4>Identificacion Usuario</h4>
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constNombre">Nombre Usuario</label>
+								<input type="text" name="constNombre" id="constNombre"
+									class="form-control input-sm">
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constApellido">Apellido
+									Usuario</label> <input type="text" name="constApellido"
+									id="constApellido" class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-10 col-md-10">
+							<div class="form-group">
+								<label class="control-label" for="constRut">Rut Usuario</label>
+								<input type="text" name="constRut" id="constRut"
+									class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constEmail">E-mail Usuario</label>
+								<input type="text" name="constEmail" id="constEmail"
+									class="form-control input-sm">
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constTelefono">Telefono
+									Usuario</label> <input type="text" name="constTelefono"
+									id="constTelefono" class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+					<br>
+					<h4>Identificacion Caso/incidente</h4>
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constMotivo">Motivo</label> <select
+									class="form-control input-sm" id="constMotivo"
+									name="constMotivo">
+									<option value="">-</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constTema">Tema</label> <select
+									class="form-control input-sm" id="constTema" name="constTema">
+									<option value="">-</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constMaquina">N° Maquina</label>
+								<input type="text" name="constMaquina" id="constMaquina"
+									class="form-control input-sm">
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constPatente">Patente Maquina</label>
+								<input type="text" name="constPatente" id="constPatente"
+									class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constFecha">Fecha</label> <input
+									type="text" name="constFecha" id="constFecha"
+									class="form-control input-sm">
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<div class="form-group">
+								<label class="control-label" for="constHora">Hora</label> <input
+									type="text" name="constHora" id="constHora"
+									class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-12 col-md-12">
+							<div class="form-group">
+								<label class="control-label" for="constDetalles">Detalles</label>
+								<textarea class="form-control" name="constDetalles"
+									id="constDetalles" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-offset-4 col-sm-10">
+							<div class="form-group">
+								<button type="submit" id="btnConstReg" class="btn btn-primary">Registrar
+								</button>
+								<button type="reset" id="btnConsReset" class="btn btn-default">Limpiar</button>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- fin formulario -->
+			</div>
+		</div>
+	</div>
+</div>
+<!--Fin Modal-->
+<!-- Fin Modal Nueva Constancia -->
+
+<!-- Modal iFrame PDF-->
+<div class="modal fade" id="modaliframe" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">X</button>
+				<h4 class="modal-title" id="myModalLabel">Titulo</h4>
+			</div>
+			<div class="modal-body">
+				<div style="text-align: center;">
+					<iframe
+						src="http://docs.google.com/gview?url=http://www.pdf995.com/samples/pdf.pdf&embedded=true"
+						style="width: 500px; height: 500px;" frameborder="0"></iframe>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fin Modal iFrame PDF-->
+
+<!-- Inicio Delete Modal -->
+<div class="modal fade" id="modaldelete" tabindex="-1" role="dialog"
+	aria-labelledby="edit" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">
+					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+				</button>
+				<h4 class="modal-title custom_align" id="Heading">Borrar Archivo</h4>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger">
+					Esta seguro que quiere Borrar este Archivo?
+					<p></p>
+				</div>
+			</div>
+			<div class="modal-footer ">
+				<button type="button" class="btn btn btn-danger" id="btnDelYes"
+					href="#">Si</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"
+					aria-hidden="true" id="btnDelNo">No</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fin Delete Modal -->
+
+<!-- Inicio Modal Reporte 1-->
+<div class="modal fade" id="ModalReporte1" tabindex="-1" role="dialog"
+	aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">x</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="lineModalLabel">Reporte</h3>
+			</div>
+			<div class="modal-body">
+				<!-- contenido -->
+				<div class="col-md-2"></div>
+				<div class="col-md-10 col-md-offset-2">
+					<div class="info-user">
+						<span aria-hidden="true" class="li_lab fs2"></span>
+					</div>
+					<canvas id="canvas" width="300" height="300"></canvas>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">Registrar</button>
+						<button type="reset" class="btn btn-default">Limpiar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fin Modal Reporte 1-->
+
+<!-- Inicio Modal Reporte 2-->
+<div class="modal fade" id="ModalReporte2" tabindex="-1" role="dialog"
+	aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">x</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="lineModalLabel">Reporte</h3>
+			</div>
+			<div class="modal-body">
+				<!-- contenido -->
+
+				<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+				<div class="modal-footer">
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-primary">Registrar</button>
+							<button type="reset" class="btn btn-default">Limpiar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Fin Modal Reporte 2-->
+
+
+
+
+
+</div>
+<!-- /row-->
+</div>
+<!-- /container-->
+</body>
+<!-- /end body-->
+
+{% endblock %} {% block javascripts %} {{ parent() }}
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/formValidation.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/framework/bootstrap.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/language/es_ES.js') }}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/js/editdata.js') }}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/dataTables.bootstrap.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/js/conductor.js')}}"></script>
+{% endblock %}

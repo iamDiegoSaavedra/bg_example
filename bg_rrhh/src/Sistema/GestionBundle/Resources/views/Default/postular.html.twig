@@ -1,0 +1,209 @@
+{% extends 'SistemaGestionBundle::layout.html.twig' %} {% block nav %}
+{{ parent() }} {% endblock %} {% block left %} {{ parent() }} {%
+endblock %} {% block right%}
+<div class="container col-xs-12 col-sm-12">
+	<div class="row">
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Empleo</a></li>
+			<li class="active">Postular</li>
+		</ul>
+	</div>
+	<div class="row">
+		<article>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="col-xs-12 col-sm-12 col-md-3">
+						<a href="#" title="Lorem ipsum" class="thumbnail"><img
+							src="http://lorempixel.com/250/140/food" alt="Lorem ipsum" /></a>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-2">
+						<ul class="meta-search">
+							<li><i class="glyphicon glyphicon-calendar"></i> <span>02/13/2014</span></li>
+							<li><i class="glyphicon glyphicon-time"></i> <span>8:32 pm</span></li>
+							<li><i class="glyphicon glyphicon-tags"></i> <span>Food</span></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-7">
+						<h3>
+							<a href="#" title="">Voluptatem, exercitationem, suscipit,
+								distinctio</a>
+						</h3>
+					</div>
+					<span class="clearfix borda"></span>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<table class="table">
+							<tbody>
+								<tr>
+									<th>Publicado</th>
+									<td>26 de mayo de 2016</td>
+								</tr>
+								<tr>
+									<th>Lugar de trabajo</th>
+									<td>Temuco</td>
+								</tr>
+								<tr>
+									<th>Telefono contacto</th>
+									<td>65818250</td>
+								</tr>
+								<tr>
+									<th>Email</th>
+									<td>mail@mail.com</td>
+								</tr>
+								<tr>
+									<th style="height: 10px;"></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="row">
+						<h1>Descripcion</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							placerat arcu vel lacus tempor cursus. Curabitur a cursus arcu.
+							Vestibulum tincidunt urna at erat sodales molestie. Fusce dapibus
+							ornare dictum. Nam laoreet elit sit amet lorem pretium, sed
+							bibendum nunc malesuada. Nullam mattis lorem a molestie accumsan.
+							Aenean condimentum nec neque ut ultricies. Pellentesque lacinia
+							purus sit amet elementum dapibus. Fusce pulvinar felis nisl, ac
+							lobortis purus laoreet bibendum. Nunc ultricies mauris sed risus
+							placerat consequat. Aenean congue hendrerit enim, varius
+							fermentum purus posuere a. Sed accumsan sed turpis ac eleifend.</p>
+						<br>
+					</div>
+					<div class="row">
+						<h1>Requisitos</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							placerat arcu vel lacus tempor cursus. Curabitur a cursus arcu.
+							Vestibulum tincidunt urna at erat sodales molestie. Fusce dapibus
+							ornare dictum. Nam laoreet elit sit amet lorem pretium, sed
+							bibendum nunc malesuada. Nullam mattis lorem a molestie accumsan.
+							Aenean condimentum nec neque ut ultricies. Pellentesque lacinia
+							purus sit amet elementum dapibus. Fusce pulvinar felis nisl, ac
+							lobortis purus laoreet bibendum. Nunc ultricies mauris sed risus
+							placerat consequat. Aenean congue hendrerit enim, varius
+							fermentum purus posuere a. Sed accumsan sed turpis ac eleifend.</p>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<div id="center">
+						<button type="submit" class="btn btn-default" data-toggle="modal"
+							data-target="#modalPostular">Postular</button>
+					</div>
+				</div>
+		
+		</article>
+
+	</div>
+
+
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog"
+		aria-labelledby="edit" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">X</button>
+					<h2>Ingresar Usuario</h2>
+				</div>
+				<div class="modal-body">
+					<form id="loginform" method="post" action='#' role="form">
+						<div class="form-group">
+							<input type="text" name="mpEmail" id="mpEmail"
+								class="form-control" placeholder="E-mail" autofocus
+								class="required"> <br>
+						</div>
+						<div class="form-group">
+							<input type="password" name="mpPass" id="mpPass"
+								class="form-control" placeholder="Contrase&#xf1;a"
+								class="required"> <br>
+						</div>
+						<button type="submit" class="btn btn-info" name="btnlog"
+							id="btnlog" href="#">
+							<span class="glyphicon glyphicon-lock"></span>Ingresar
+						</button>
+						<span class="pull-right"> <a data-toggle="modal"
+							data-target="#ModalOlvidar">&#xbf;Olvidaste Tu Contrase&#xf1;a?</a>
+						</span>
+					</form>
+				</div>
+				<div class="modal-footer">
+					&#xbf;No tienes una cuenta aqui? <a class="btn btn-warning"
+						href="postulantes"> Crear Cuenta </a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalPostular" tabindex="-1" role="dialog">
+
+		<form class="form-login">
+			<div class="form-login-heading">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">x&nbsp;</span><span class="sr-only">Close</span>
+				</button>
+			</div>
+			<h2 class="form-login-heading">Ingresar Usuario a Busgestion</h2>
+
+			<div class="login-wrap">
+				<input type="text" class="form-control" placeholder="User ID"
+					autofocus> <br> <input type="password" class="form-control"
+					placeholder="Password"> <label class="checkbox"> <span
+					class="pull-right"> <a data-toggle="modal" href="#myModalOlvidar">&#xbf;Olvidaste
+							Tu Contrase&#xf1;a?</a>
+
+				</span>
+				</label>
+				<button class="btn btn-primary" href="index" type="submit">
+					<i class="fa fa-lock"></i>Ingresar
+				</button>
+				<hr>
+
+				<div class="registration">
+					&#xbf;No tienes una cuenta aqui?<br /> <a class="" href="#"> Crear
+						Cuenta </a>
+				</div>
+
+			</div>
+		</form>
+	</div>
+
+	<!-- Modal -->
+	<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog"
+		tabindex="-1" id="ModalOlvidar" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title">&#xbf;Olvidaste Tu contrase&#xf1;a?</h4>
+				</div>
+				<div class="modal-body">
+					<p>Introduzca su direcci&#xf3;n de correo electr&#xf3;nico para
+						restablecer tu contrase&#xf1;a.</p>
+					<input type="text" name="forgetEmail" id="forgetEmail"
+						placeholder="E-mail" class="form-control placeholder-no-fix">
+				</div>
+				<div class="modal-footer">
+					<button data-dismiss="modal" class="btn btn-default" type="button"
+						id="btnforgetCancel">Cancelar</button>
+					<button class="btn btn-primary" type="button" id="btnforgetEnviar">Enviar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal -->
+
+
+
+</div>
+{% endblock %} {% block javascripts %} {{ parent() }}
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/formValidation.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/framework/bootstrap.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/language/es_ES.js') }}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/js/postular.js')}}"></script>
+{% endblock %}

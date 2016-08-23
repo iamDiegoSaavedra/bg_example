@@ -1,0 +1,126 @@
+{% extends '::base.html.twig' %} {% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ asset('css/structure.css') }}">
+<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+{% endblock %} {% block body %}
+<header class="main-header">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="top-bar navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="/index" class="navbar-brand"><i class="fa fa-bus"
+						aria-hidden="true"></i></a>
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="index">Inicio</a></li>
+						<li><a href="#">Gestion Conductor</a></li>
+						<li><a href="#sec">Gestion Empleo</a></li>
+						<li><a href="#sec">Ayuda</a></li>
+						<li class="dropdown">
+							<!-- inicia el dropdown --> <a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">
+								<!-- invoca al plugin de bootstrap --> Acerca de <span
+								class="caret"></span>
+						</a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="#">Page 1-1</a></li>
+								<li><a href="#">Page 1-2</a></li>
+								<li><a href="#">Page 1-3</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+
+				<!-- Navbar Right Menu -->
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+
+						<!-- User Account Menu -->
+						<li class="dropdown logged-user">
+							<!-- Menu Toggle Button --> <a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"> <!-- The user image in the navbar--> <span
+								class="glyphicon glyphicon-user"></span> <!-- hidden-xs hides the username on small devices so only the image appears. -->
+								<span class="hidden-xs">Alexander Pierce</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<!-- Menu Body -->
+								<li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a>
+								</li>
+								<li><a href="#"><span class="glyphicon glyphicon-wrench"></span>Configuracion</a>
+								</li>
+								<li><a href="#"><span class="glyphicon glyphicon-off"></span>Logout</a>
+								</li>
+
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-custom-menu -->
+
+
+
+
+
+
+			</div>
+			<!-- /.container-fluid -->
+		</div>
+	</nav>
+</header>
+<body class="layout-top-nav" data-spy="scroll"
+	data-target="#myScrollspy" data-offset="15">
+
+	<div id="masthead">
+		<div class="container">
+			<div class="row"></div>
+		</div>
+	</div>
+	<!--/container-->
+	</div>
+	<!--/masthead-->
+	<!--main-->
+	<div class="container">
+		<div class="row">
+			<!--left-->
+			<div class="col-md-3" id="leftCol">
+				{% block left %}
+				<ul class="nav nav-stacked" data-spy="affix" data-offset-top="205"
+					id="sidebar">
+					<li><a href="#sec0">Perfil Conductor</a></li>
+					<li><a href="#sec2">Hoja de Vida Conductor</a></li>
+					<li><a href="#sec3">Sanciones</a></li>
+					<li><a href="#sec3">Constancias</a></li>
+					<li><a href="empleo">Gestion empleo</a>
+				
+				</ul>
+				{% endblock %}
+			</div>
+			<!--end left-->
+
+			<!--right-->
+			<div class="col-md-9">{% block right %} {% endblock %}</div>
+			<!--/right-->
+		</div>
+		<!--/row-->
+	</div>
+	<!--/container-->
+</body>
+<footer class="container-fluid text-center"> </footer>
+{% endblock %} {% block javascripts %}
+<script type="text/javascript" src="{{ asset('js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/gauge.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/funciones.js') }}"></script>
+{% endblock %}

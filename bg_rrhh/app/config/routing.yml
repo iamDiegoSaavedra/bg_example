@@ -1,0 +1,8 @@
+sistema_gestion:
+    resource: "@SistemaGestionBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

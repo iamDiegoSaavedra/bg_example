@@ -1,0 +1,327 @@
+{% extends 'SistemaGestionBundle::layout.html.twig' %} {% block
+stylesheets %} {{ parent() }} {% endblock %} {% block right %}
+<div class='container col-md-12'>
+	<section id="wizard">
+		<div class="page-header">
+			<h3>Ingreso Postulantes</h3>
+		</div>
+		<form id="commentForm" method="get" action="" class="form-horizontal">
+			<div id="rootwizard">
+				<ul class="nav nav-pills nav-justified">
+					<li><a href="#tab1" data-toggle="tab">Paso 1</a></li>
+					<li><a href="#tab2" data-toggle="tab">Paso 2</a></li>
+					<li><a href="#tab3" data-toggle="tab">Paso 3</a></li>
+					<li><a href="#tab4" data-toggle="tab">Paso 4</a></li>
+				</ul>
+				<br>
+				<div class="progress">
+					<div
+						class="progress-bar progress-bar-success progress-bar-striped active"
+						role="progressbar" aria-valuenow="1" aria-valuemin="1"
+						aria-valuemax="4" style="width: 25%;">Paso 1 de 4</div>
+				</div>
+				<div class="tab-content">
+
+					<!-- STEP 1 -->
+					<div class="tab-pane" id="tab1">
+
+						<h2>Datos Personales</h2>
+						<div id="step1">
+							<div class="form-group">
+								<label class="control-label" for="name">Nombre</label>
+								<div class="controls">
+									<input type="text" id="name" name="name" class="form-control"
+										class="required">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="apellido">Apellido</label>
+								<div class="controls">
+									<input type="text" id="apellido" name="apellido"
+										class="form-control" class="required">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="rut">RUT</label>
+								<div class="controls">
+									<input type="text" id="rut" name="rut" class="form-control"
+										class="required">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="dir">Direccion</label>
+								<div class="controls">
+									<input type="text" id="dir" name="dir" class="form-control"
+										class="required">
+								</div>
+							</div>
+
+							<div class="form-group inline">
+								<label class="control-label" for="numtel">Telefono</label>
+								<div class="controls">
+									<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+										<div class="select">
+											<select id="codTel" name="codTel" class="form-control"
+												class="required">
+												<option value="">--</option>
+												<option value="9">9</option>
+												<option value="2">2</option>
+												<option value="32">32</option>
+												<option value="33">33</option>
+												<option value="34">34</option>
+												<option value="35">35</option>
+												<option value="41">41</option>
+												<option value="42">42</option>
+												<option value="43">43</option>
+												<option value="45">45</option>
+												<option value="51">51</option>
+												<option value="52">52</option>
+												<option value="53">53</option>
+												<option value="55">55</option>
+												<option value="57">57</option>
+												<option value="58">58</option>
+												<option value="61">61</option>
+												<option value="63">63</option>
+												<option value="64">64</option>
+												<option value="65">65</option>
+												<option value="67">67</option>
+												<option value="71">71</option>
+												<option value="72">72</option>
+												<option value="73">73</option>
+												<option value="75">75</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+										<input type="text" id="numtel" name="numtel"
+											class="form-control" class="required">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="selcomuna">Comuna</label>
+								<div class="controls">
+									<select id="selcomuna" name="selcomuna" class="form-control"
+										class="required">
+										<option value="">-</option>
+										<option value="1">Temuco</option>
+										<option value="2">P. Las casas</option>
+										<option value="3">Lautaro</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="selNacionalidad">Nacionalidad</label>
+								<div class="controls">
+									<select id="selNacionalidad" name="selNacionalidad"
+										class="form-control" class="required">
+										<option value="">-</option>
+										<option value="1">Chile</option>
+										<option value="2">Otro</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="gender">Genero:</label> <label
+									class="radio-inline" for="gender_m"> <input type="radio"
+									id="gender_m" value="c" name="gender" /> Masculino
+								</label> <label class="radio-inline" for="gender_f"> <input
+									type="radio" id="gender_f" value="f" name="gender" /> Femenino
+								</label> <label for="gender" class="error"></label>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label" for="posAdjCur">Adjuntar
+									Curriculum:</label>
+								<div class="controls">
+									<input type="file" id="posAdjCur" name="posAdjCur">
+									<p class="help-block">Clic para subir archivo</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Fin STEP 1 -->
+
+					<!-- STEP 2 -->
+					<div class="tab-pane" id="tab2">
+						<h4>Datos Laborales</h4>
+						<div id="step2">
+							<div class="form-group">
+								<label class="control-label" for="selEstudios">Nivel de Estudio</label>
+								<div class="controls">
+									<select id="selEstudios" name="selEstudios"
+										class="form-control" required>
+										<option value="1">Basica</option>
+										<option value="2">Media</option>
+										<option value="1">Tecnica Superior</option>
+										<option value="2">Profesional Superior</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label">Institucion</label>
+								<div class="controls">
+									<input type="text" id="Institucion" name="Institucion"
+										class="form-control">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label">Area Estudio</label>
+								<div class="controls">
+									<input type="text" id="areaEstudio" name="areaEstudio"
+										class="form-control">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label">Experiencia:</label>
+								<div class="controls">
+									<textarea id="experiencia" name="experiencia" rows="3" cols="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Referencias:</label>
+								<div class="controls">
+									<textarea id="ref" name="ref" rows="3" cols="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Conocimientos Adicionales</label>
+								<div class="controls">
+									<textarea id="conadicional" name="conadicional" rows="3"
+										cols="2"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Fin STEP 2 -->
+
+					<!-- STEP 3 -->
+					<div class="tab-pane" id="tab3">
+						<h4>Datos Cuenta Usuario</h4>
+						<div id="step3">
+							<div class="form-group">
+								<label class="control-label" for="email">Email</label>
+								<div class="controls">
+									<input type="text" id="email" name="email" class="form-control"
+										class="required email">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="name">Contrase&#xf1;a</label>
+								<div class="controls">
+									<input type="password" id="password" name="password"
+										class="form-control" class="required">
+								</div>
+							</div>
+
+							<label class="control-label" for="email">Repita Contrase&#xf1;a</label>
+							<div class="controls">
+								<div class="form-group">
+									<input type="password" id="rpassword" name="rpassword"
+										class="form-control" class="required">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="controls">
+									<label class="checkbox-inline" id="lblterms" name="lblterms"
+										for="-0"> <input type="checkbox" name="terms" id="-0"
+										value="1" required> Acepta los <a data-toggle="modal"
+										data-target="#modalTerm">Terminos y Condiciones</a>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Fin STEP 3 -->
+					<!-- STEP 4 -->
+					<div class="tab-pane" id="tab4">
+						<div>
+							<div class="alert alert-success">
+								<strong>Datos ingresados!</strong> <br>Gracias por ..... <br>
+							</div>
+							<a class="btn btn-success first" id="next-5" name="next" href="#">Fin
+								Formualrio</a> <br>
+						</div>
+					</div>
+					<!-- FIN STEP 4 -->
+					<ul class="pager wizard">
+						<li class="previous first" style="display: none;"><a href="#">Primero</a></li>
+						<li class="previous"><a href="#">Anterior</a></li>
+						<li class="next last" style="display: none;"><a href="#">Ultimo</a></li>
+						<li class="next"><a href="#">Siguiente</a></li>
+					</ul>
+				</div>
+			</div>
+		</form>
+	</section>
+</div>
+<!-- line modal -->
+<div class="modal fade" id="modalWelcome" tabindex="-1" role="dialog"
+	aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="lineModalLabel">Bienvenido</h3>
+			</div>
+			<div class="modal-body">
+				<!-- content goes here -->
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Suspendisse finibus, nisl et bibendum condimentum, velit elit
+					ultrices felis, quis dignissim erat diam sit amet turpis. Nunc
+					rhoncus libero et sem rutrum, elementum rhoncus dolor auctor. Donec
+					mollis ligula ut erat faucibus, et tincidunt lectus tristique.
+					Morbi egestas pellentesque ipsum. Morbi tempus justo tempus lacus
+					interdum laoreet. Vestibulum ante ipsum primis in faucibus orci
+					luctus et ultrices posuere cubilia Curae; Maecenas hendrerit ligula
+					vel ipsum placerat, at vehicula nulla varius. Nullam suscipit sed
+					felis in blandit. Donec id ligula ut neque elementum porttitor quis
+					sit amet mi. Curabitur sed tempor sapien. Cras vel quam et purus
+					dictum blandit eget ac mauris.
+				
+				
+				<p>
+			
+			</div>
+			<div class="modal-footer">
+				<div class="btn-group btn-group-justified" role="group"
+					aria-label="group button">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default" data-dismiss="modal"
+							role="button">Cerrar</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal"
+							role="button" href="empleo">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %} {% block javascripts %} {{ parent() }}
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/js/prueba.js')}}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/all.js')}}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/jquery.bootstrap.wizard.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/jquery.validate.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{ asset('bundles/sistemagestion/plugin/additional-methods.min.js')}}"></script>
+{% endblock %}
